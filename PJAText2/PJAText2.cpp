@@ -1,13 +1,14 @@
 #include <iostream>
-#include <string>
 
 #include "Engine.h"
 #include "app_commands.h"
 
-using std::cout;
-using std::string;
 
-
+/**
+ * @brief Creates an Engine object with all the Commands included
+ * 
+ * @return Engine object
+ */
 Engine create_engine() {
     Engine engine = Engine();
     engine.add(OperationalCommands::CountChars())
@@ -25,6 +26,15 @@ Engine create_engine() {
     return engine;
 }
 
+
+/**
+ * @brief Executes the Engine on flags provided from the arguments
+ *
+ * @param argc - amount of arguments
+ * @param argv - arguments
+ * 
+ * @return int
+ */
 int main(int argc, char** argv)
 {
     Vec<String> args = Vec<String>();
