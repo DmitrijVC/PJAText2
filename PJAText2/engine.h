@@ -54,11 +54,12 @@ private:
 
 		if (!operations.file_out.empty()) {
 			File::write_unchecked(operations.file_out, output_stream.str());
+
+			clear();
 			return "";
 		}
 
 		clear();
-
 		return output_stream.str();
 	}
 
